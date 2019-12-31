@@ -1,0 +1,23 @@
+import React, {Component} from 'react';
+import {Content, ListItem} from 'native-base';
+import {View, Text, Image} from 'react-native';
+import {Actions} from 'react-native-router-flux';
+
+export default class Menu extends Component {
+  render() {
+    return (
+      <View style={{flex: 1}}>
+        <View style={{flex: 2}}>
+          <Content>
+            <ListItem onPress={() => Actions.main()}>
+              <Text>Dashboard</Text>
+            </ListItem>
+            <ListItem onPress={() => Actions.profile()}>
+              <Text>Profile</Text>
+            </ListItem>
+          </Content>
+        </View>
+      </View>
+    );
+  }
+}
