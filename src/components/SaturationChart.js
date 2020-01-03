@@ -8,7 +8,7 @@ import {
   VictoryBrushContainer,
 } from 'victory-native';
 
-export default class NetworkChart extends Component {
+export default class SaturationChart extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,7 +32,7 @@ export default class NetworkChart extends Component {
     return (
       <View>
         <View style={styles.headerWrapper}>
-          <Text style={styles.header}>Network Usage</Text>
+          <Text style={styles.header}>Saturation</Text>
         </View>
         <VictoryChart
           responsive
@@ -45,10 +45,7 @@ export default class NetworkChart extends Component {
               onZoomDomainChange={this.handleZoom}
             />
           }>
-          <VictoryAxis
-            dependentAxis
-            tickFormat={x => (x / 1000).toFixed(1) + 'kb/s'}
-          />
+          <VictoryAxis dependentAxis tickFormat={x => x + '%'} />
           <VictoryAxis
             tickFormat={x => {
               const date = new Date(x * 1000);
@@ -100,7 +97,7 @@ const styles = {
     marginTop: 50,
     marginRight: 10,
     marginBottom: 10,
-    borderTopColor: '#076280',
+    borderTopColor: '#ff8300',
     borderBottomColor: '#ddd',
     borderTopWidth: 5,
     borderBottomWidth: 1,
@@ -110,13 +107,13 @@ const styles = {
     alignSelf: 'flex-start',
     fontSize: 18,
     textTransform: 'uppercase',
-    color: '#076280',
+    color: '#ff8300',
   },
 };
 
 const lineTheme = {
   data: {
-    stroke: '#076280',
+    stroke: '#ff8300',
     strokeWidth: 1,
   },
   parent: {

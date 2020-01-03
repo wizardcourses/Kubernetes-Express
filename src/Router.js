@@ -1,5 +1,4 @@
 import React from 'react';
-import Charts from './components/Charts';
 import {Scene, Router, Drawer, Overlay} from 'react-native-router-flux';
 import {Icon} from 'native-base';
 import Menu from './containers/Menu';

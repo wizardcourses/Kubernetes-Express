@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import {View, ScrollView, RefreshControl} from 'react-native';
 import {connect} from 'react-redux';
 import NetworkChart from '../components/NetworkChart';
+import SaturationChart from '../components/SaturationChart';
+import MemUsageChart from '../components/MemUsageChart';
+import CpuUsageChart from '../components/CpuUsageChart';
 import * as actions from '../actions';
 import {Spinner} from '../containers/common';
 
@@ -45,6 +48,24 @@ class DashBoard extends Component {
                 return (
                   <View key={i}>
                     <NetworkChart data={this.props[dataType]} />
+                  </View>
+                );
+              } else if (dataType === 'cpuUsage') {
+                return (
+                  <View key={i}>
+                    <CpuUsageChart data={this.props[dataType]} />
+                  </View>
+                );
+              } else if (dataType === 'memUsage') {
+                return (
+                  <View key={i}>
+                    <MemUsageChart data={this.props[dataType]} />
+                  </View>
+                );
+              } else if (dataType === 'saturation') {
+                return (
+                  <View key={i}>
+                    <SaturationChart data={this.props[dataType]} />
                   </View>
                 );
               }
