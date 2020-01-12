@@ -24,12 +24,16 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         email: action.payload,
+        signupError: '',
+        loginError: '',
       };
 
     case PASSWORD_CHANGED:
       return {
         ...state,
         password: action.payload,
+        signupError: '',
+        loginError: '',
       };
     case SIGNUP_USER_SUCCESS:
       return {

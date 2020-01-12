@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import {Card, CardSection, Input, Button} from './common';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
@@ -47,6 +47,10 @@ class SignupForm extends Component {
   render() {
     return (
       <View style={styles.containerStyle}>
+        <Image
+          style={styles.logo}
+          source={require('../assets/images/kubernetesExpress.png')}
+        />
         <Card>
           <CardSection>
             <Input
@@ -89,6 +93,7 @@ const styles = {
     color: 'red',
     marginBottom: 20,
   },
+  logo: {height: 335, width: 400, alignSelf: 'center'},
 };
 
 const mapStateToProps = ({auth}) => {

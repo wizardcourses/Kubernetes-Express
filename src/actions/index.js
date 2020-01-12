@@ -99,6 +99,7 @@ export const fetchMetricsSuccess = (dispatch, data) => {
 };
 
 export const fetchMetrics = ({apiKey, url}) => {
+  console.log(apiKey, url, 'HEREEEE');
   return dispatch => {
     dispatch({type: FETCH_METRICS});
 

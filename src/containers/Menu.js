@@ -7,6 +7,12 @@ export default class Menu extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
+        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+          <Image
+            style={{width: 300, height: 300}}
+            source={require('../assets/images/kubX.png')}
+          />
+        </View>
         <View style={{flex: 2}}>
           <Content>
             <ListItem onPress={() => Actions.main()}>
@@ -14,6 +20,9 @@ export default class Menu extends Component {
             </ListItem>
             <ListItem onPress={() => Actions.profile()}>
               <Text>Profile</Text>
+            </ListItem>
+            <ListItem onPress={() => Actions.reset('login')}>
+              <Text>Logout</Text>
             </ListItem>
           </Content>
         </View>

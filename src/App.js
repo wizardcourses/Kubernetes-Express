@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import RouterComponent from './Router';
 import {Provider} from 'react-redux';
-import {store} from './configureStore';
+import {store, persistor} from './configureStore';
 import * as firebase from 'firebase';
+import {PersistGate} from 'redux-persist/integration/react';
 
 class App extends Component {
   componentWillMount() {
@@ -23,7 +24,9 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <RouterComponent />
+        <PersistGate persistor={persistor}>
+          <RouterComponent />
+        </PersistGate>
       </Provider>
     );
   }

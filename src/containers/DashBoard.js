@@ -93,12 +93,20 @@ const styles = {
 
 const mapStateToProps = ({metrics, api}) => {
   const {isLoading, cpuUsage, memUsage, networkTraffic, saturation} = metrics;
-
-  return {isLoading, cpuUsage, memUsage, networkTraffic, saturation};
+  const {apiKey, url} = api;
+  return {
+    isLoading,
+    cpuUsage,
+    memUsage,
+    networkTraffic,
+    saturation,
+    apiKey,
+    url,
+  };
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchMetrics: () => dispatch(actions.fetchMetrics()),
+  fetchMetrics: (apiKey, url) => dispatch(actions.fetchMetrics(apiKey, url)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DashBoard);

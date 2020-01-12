@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View} from 'react-native';
+import {View, Image} from 'react-native';
 import {Card, Input, CardSection, Button} from './common';
 import * as actions from '../actions';
 import {connect} from 'react-redux';
@@ -41,6 +41,15 @@ class Profile extends Component {
     );
   }
 
+  showLogo() {
+    return (
+      <Image
+        style={styles.logo}
+        source={require('../assets/images/kubernetesExpress.png')}
+      />
+    );
+  }
+
   render() {
     return (
       <View
@@ -49,7 +58,7 @@ class Profile extends Component {
           flex: 1,
           justifyContent: 'flex-start',
         }}>
-        {/* card view */}
+        {this.showLogo()}
         <Card>
           <CardSection>
             <Input
@@ -71,11 +80,19 @@ class Profile extends Component {
           </CardSection>
           {this.renderButton()}
         </Card>
+        {this.showLogo()}
       </View>
     );
   }
 }
 
+const styles = {
+  logo: {
+    height: 300,
+    width: 400,
+    alignSelf: 'center',
+  },
+};
 const mapStateToProps = ({api}) => {
   const {loading, apiKey, url} = api;
 

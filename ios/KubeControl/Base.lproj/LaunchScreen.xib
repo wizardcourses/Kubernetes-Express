@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina6_5" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,31 +15,50 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Powered by React Native" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
-                    <rect key="frame" x="20" y="439" width="441" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="KubeControl" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="140" width="441" height="43"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oz4-yM-IDH">
+                    <rect key="frame" x="20" y="120" width="450" height="83"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" image="YES"/>
+                    </accessibility>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="courseOps" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pkv-ad-hcU">
+                    <rect key="frame" x="65" y="110" width="350" height="260"/>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/3" constant="1" id="5cJ-9S-tgC"/>
-                <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
-                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
-                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
+                <constraint firstItem="pkv-ad-hcU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5Np-Zc-u7v"/>
+                <constraint firstItem="pkv-ad-hcU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="7gz-H1-4Gw"/>
+                <constraint firstItem="pkv-ad-hcU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8gI-In-drd"/>
+                <constraint firstItem="oz4-yM-IDH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Aa6-oV-Q43"/>
+                <constraint firstItem="pkv-ad-hcU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ee4-Wl-0qm"/>
+                <constraint firstItem="pkv-ad-hcU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FTP-9L-hA7"/>
+                <constraint firstAttribute="trailing" secondItem="oz4-yM-IDH" secondAttribute="trailing" constant="20" id="H7P-rr-KN8"/>
+                <constraint firstItem="pkv-ad-hcU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IQk-Ij-bPF"/>
+                <constraint firstItem="pkv-ad-hcU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KpY-Xw-FBF"/>
+                <constraint firstItem="pkv-ad-hcU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="OnO-Ng-K8c"/>
+                <constraint firstItem="pkv-ad-hcU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="PwV-4q-lSG"/>
+                <constraint firstItem="pkv-ad-hcU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="R9I-v2-eeZ"/>
+                <constraint firstItem="oz4-yM-IDH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="U73-kQ-8ff"/>
+                <constraint firstItem="pkv-ad-hcU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Y0e-TD-QaU"/>
+                <constraint firstItem="oz4-yM-IDH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Z7H-oe-GX1"/>
+                <constraint firstItem="pkv-ad-hcU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="eZc-kL-TRZ"/>
+                <constraint firstItem="pkv-ad-hcU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fcj-jU-IkK"/>
+                <constraint firstItem="oz4-yM-IDH" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="fnh-NU-qxy"/>
+                <constraint firstItem="pkv-ad-hcU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mQN-tf-I0G"/>
+                <constraint firstItem="pkv-ad-hcU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="nVQ-P9-Un4"/>
+                <constraint firstAttribute="trailing" secondItem="oz4-yM-IDH" secondAttribute="trailing" constant="10" id="nZR-xg-0bG"/>
+                <constraint firstItem="pkv-ad-hcU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="sT0-Sw-gVy"/>
+                <constraint firstItem="pkv-ad-hcU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="tre-bV-aHA"/>
+                <constraint firstItem="pkv-ad-hcU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yHx-Gb-8Mf"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="548" y="455"/>
+            <point key="canvasLocation" x="547.82608695652175" y="454.6875"/>
         </view>
     </objects>
+    <resources>
+        <image name="courseOps" width="350" height="260"/>
+    </resources>
 </document>
